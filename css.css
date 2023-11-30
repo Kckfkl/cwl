@@ -1,0 +1,282 @@
+        /* Reset some default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* CSS */
+        body {
+            background-color: #fff;
+            color: #000;
+            font-family: Arial, sans-serif;
+            /* Replace 'Your New Font' with the desired font name */
+        }
+
+        header {
+            background-image: url("img/cwl_image.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center center;
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        h1 {
+            font-size: 48px;
+            /* Increase the font size for <h1> */
+        }
+
+        p {
+            font-size: 20px;
+            /* Increase the font size for <p> elements */
+        }
+
+
+        .icon {
+            width: 60px;
+            height: 60px;
+            margin-right: 10px;
+        }
+
+        .rules,
+        .clan {
+            background-color: #fff;
+            border: 2px solid #cfcfcf;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        /* Add this CSS to your existing styles */
+        .clan-title {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+
+        .clan-title h2 {
+            margin-left: 10px;
+            /* Adjust the spacing between the icon and clan name */
+        }
+
+        /* Center-align the footer text */
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #fff;
+            border-top: 2px solid #cfcfcf;
+        }
+
+        /* Responsive adjustments */
+        @media screen and (max-width: 768px) {
+            header {
+                padding: 50px 0;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            h2 {
+                font-size: 18px;
+            }
+
+            .icon {
+                width: 40px;
+                height: 40px;
+                margin-right: 10px;
+            }
+        }
+
+        .clan-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px 0;
+            /* Add margin for spacing between titles */
+        }
+
+        .clan-title img.icon {
+            width: 60px;
+            height: 60px;
+            margin-right: 10px;
+        }
+
+        .clan-title h2 {
+            font-size: 24px;
+            /* Adjust the font size as needed */
+            font-weight: bold;
+        }
+
+        .clan-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+            /* Add space below each clan title */
+        }
+
+        .clan-title img.icon {
+            margin-right: 10px;
+            /* Add space between icon and title */
+        }
+
+        /* Add Hover Effect for Clan Links */
+        .clan-title a {
+            margin-left: 4px;
+            text-decoration: none;
+            color: #007bff;
+            /* Blue color for the link */
+            transition: color 0.3s;
+            /* Smooth color transition on hover */
+        }
+
+        .clan-title a:hover {
+            color: #0056b3;
+            /* Darker blue color on hover */
+        }
+
+        .link-icon {
+            width: 20px;
+            /* Adjust the width to your desired size */
+            height: 20px;
+            /* Adjust the height to your desired size */
+            margin-left: 10px;
+            /* Add margin to separate the icon from text if needed */
+        }
+
+        .rule-grid {
+            list-style: none;
+            /* Remove default list bullets */
+            padding: 0;
+            /* Remove default padding */
+        }
+
+        .rule-grid li {
+            margin-bottom: 10px;
+            /* Add some space between each rule */
+            padding: 10px;
+            /* Add padding to each rule for better readability */
+            background-color: #f7f7f7;
+            /* Light gray background color */
+            border: 1px solid #ccc;
+            /* Gray border */
+            border-radius: 5px;
+            /* Rounded corners */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            /* Add a subtle shadow */
+            font-size: 16px;
+            /* Font size for rules */
+            line-height: 1.5;
+            /* Line height for better spacing */
+            font-family: Arial, sans-serif;
+            /* Change the font family */
+            color: #333;
+            /* Change the text color */
+        }
+
+        .rule-grid li:hover {
+            background-color: #ddd;
+            /* Change the background color on hover */
+        }
+
+        /* Original styles for the .player-grid */
+        /* Updated styles for the .player-grid */
+        .player-grid {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            margin: 10px -5px;
+            /* Adjust negative margin to account for spacing */
+        }
+
+        .player-grid li {
+            width: calc(25% - 10px);
+            /* Adjust width to include spacing */
+            margin: 5px;
+            /* Add spacing between items */
+            padding: 10px;
+            background-color: #f7f7f7;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            font-size: 18px;
+            line-height: 1.5;
+            font-family: Arial, sans-serif;
+            color: #333;
+            text-align: center;
+        }
+
+        .player-grid li:hover {
+            background-color: #ddd;
+        }
+
+
+        /* Media query for smaller screens */
+        @media screen and (max-width: 768px) {
+            .player-grid {
+                justify-content: center;
+                /* Center-align items */
+            }
+
+            .player-grid li {
+                width: 100%;
+                /* Full width for 1x1 grid */
+                margin-right: 0;
+                /* Remove right margin for 1x1 grid */
+            }
+        }
+
+        /* Styles for the link with the "custom-link" class */
+        .custom-link {
+            text-decoration: none;
+            /* Remove underline */
+            color: #3498db;
+            /* Set link color */
+            font-weight: bold;
+            /* Set font weight to bold */
+        }
+
+        .custom-link:hover {
+            color: #21618c;
+            /* Change color on hover */
+        }
+
+        /* Optional: Add styling for when the link is visited */
+        .custom-link:visited {
+            color: #8e44ad;
+            /* Set color for visited link */
+        }
+
+        .clan-roster {
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+
+        .clan-roster p {
+            margin-right: 10px;
+            /* Adjust the margin as needed to create space between text and image */
+        }
+
+        .clan-roster img {
+            max-width: 40px;
+            /* Adjust the maximum width as needed */
+            height: auto;
+        }
+
+        @media (max-width: 600px) {
+            .clan-roster {
+              flex-direction: column;
+            }
+        
+            .clan-roster p {
+              margin-right: 0; /* Remove margin for smaller screens */
+              margin-bottom: 5px; /* Add margin below text for spacing */
+            }
+        }

@@ -5,259 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Krazy Canucks</title>
-    <style>
-        /* Reset some default styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* CSS */
-        body {
-            background-color: #fff;
-            color: #000;
-            font-family: Arial, sans-serif;
-            /* Replace 'Your New Font' with the desired font name */
-        }
-
-        header {
-            background-image: url("cwl_image.jpg");
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-position: center center;
-            text-align: center;
-            padding: 100px 0;
-        }
-
-        h1 {
-            font-size: 48px;
-            /* Increase the font size for <h1> */
-        }
-
-        p {
-            font-size: 20px;
-            /* Increase the font size for <p> elements */
-        }
-
-
-        .icon {
-            width: 40px;
-            height: 40px;
-            margin-right: 10px;
-        }
-
-        .rules,
-        .clan {
-            background-color: #fff;
-            border: 2px solid #cfcfcf;
-            border-radius: 10px;
-            padding: 20px;
-            margin: 20px;
-        }
-
-        /* Add this CSS to your existing styles */
-        .clan-title {
-            display: flex;
-            align-items: center;
-            margin-bottom: 5px;
-        }
-
-        .clan-title h2 {
-            margin-left: 10px;
-            /* Adjust the spacing between the icon and clan name */
-        }
-
-        /* Center-align the footer text */
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #fff;
-            border-top: 2px solid #cfcfcf;
-        }
-
-        /* Responsive adjustments */
-        @media screen and (max-width: 768px) {
-            header {
-                padding: 50px 0;
-            }
-
-            h1 {
-                font-size: 24px;
-            }
-
-            h2 {
-                font-size: 18px;
-            }
-
-            .icon {
-                width: 30px;
-                height: 30px;
-                margin-right: 10px;
-            }
-        }
-
-        .clan-title {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 10px 0;
-            /* Add margin for spacing between titles */
-        }
-
-        .clan-title img.icon {
-            width: 40px;
-            height: 40px;
-            margin-right: 10px;
-        }
-
-        .clan-title h2 {
-            font-size: 24px;
-            /* Adjust the font size as needed */
-            font-weight: bold;
-        }
-
-        .clan-title {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 10px;
-            /* Add space below each clan title */
-        }
-
-        .clan-title img.icon {
-            margin-right: 10px;
-            /* Add space between icon and title */
-        }
-
-        /* Add Hover Effect for Clan Links */
-        .clan-title a {
-            margin-left: 4px;
-            text-decoration: none;
-            color: #007bff;
-            /* Blue color for the link */
-            transition: color 0.3s;
-            /* Smooth color transition on hover */
-        }
-
-        .clan-title a:hover {
-            color: #0056b3;
-            /* Darker blue color on hover */
-        }
-
-        .link-icon {
-            width: 20px;
-            /* Adjust the width to your desired size */
-            height: 20px;
-            /* Adjust the height to your desired size */
-            margin-left: 10px;
-            /* Add margin to separate the icon from text if needed */
-        }
-
-        .rule-grid {
-            list-style: none;
-            /* Remove default list bullets */
-            padding: 0;
-            /* Remove default padding */
-        }
-
-        .rule-grid li {
-            margin-bottom: 10px;
-            /* Add some space between each rule */
-            padding: 10px;
-            /* Add padding to each rule for better readability */
-            background-color: #f7f7f7;
-            /* Light gray background color */
-            border: 1px solid #ccc;
-            /* Gray border */
-            border-radius: 5px;
-            /* Rounded corners */
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            /* Add a subtle shadow */
-            font-size: 16px;
-            /* Font size for rules */
-            line-height: 1.5;
-            /* Line height for better spacing */
-            font-family: Arial, sans-serif;
-            /* Change the font family */
-            color: #333;
-            /* Change the text color */
-        }
-
-        .rule-grid li:hover {
-            background-color: #ddd;
-            /* Change the background color on hover */
-        }
-
-        /* Original styles for the .player-grid */
-        /* Updated styles for the .player-grid */
-        .player-grid {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: flex-start;
-            margin: 10px -5px;
-            /* Adjust negative margin to account for spacing */
-        }
-
-        .player-grid li {
-            width: calc(25% - 10px);
-            /* Adjust width to include spacing */
-            margin: 5px;
-            /* Add spacing between items */
-            padding: 10px;
-            background-color: #f7f7f7;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            font-size: 18px;
-            line-height: 1.5;
-            font-family: Arial, sans-serif;
-            color: #333;
-            text-align: center;
-        }
-
-        .player-grid li:hover {
-            background-color: #ddd;
-        }
-
-
-        /* Media query for smaller screens */
-        @media screen and (max-width: 768px) {
-            .player-grid {
-                justify-content: center;
-                /* Center-align items */
-            }
-
-            .player-grid li {
-                width: 100%;
-                /* Full width for 1x1 grid */
-                margin-right: 0;
-                /* Remove right margin for 1x1 grid */
-            }
-        }
-
-          /* Styles for the link with the "custom-link" class */
-  .custom-link {
-      text-decoration: none;
-      /* Remove underline */
-      color: #3498db;
-      /* Set link color */
-      font-weight: bold;
-      /* Set font weight to bold */
-  }
-  .custom-link:hover {
-      color: #21618c;
-      /* Change color on hover */
-  }
-  /* Optional: Add styling for when the link is visited */
-  .custom-link:visited {
-      color: #8e44ad;
-      /* Set color for visited link */
-  }
-    </style>
+    <link rel="stylesheet" href="css.css">
 </head>
 
 <body>
@@ -267,18 +15,14 @@
         </p>
         <p>
         <p style="font-size: 30px; color: rgb(247, 247, 247); font-weight: bold; padding: 5px;">Searching Time will be
-            5PM - 8PM EST WEDNESDAY</p>
+            6PM - 8PM EST FRIDAY</p>
         </p>
     </header>
 
-     <section class="rules" style="text-align: center;">
-        <a href="https://link.clashofclans.com/en?action=voucher&code=68815144-e63a-4ed5-b224-457d7a92b470"
-        target="_blank" rel="noopener noreferrer" class="custom-link"> Claim your free decorations in Clash of Clans! Please hurry. Click here.</a>
-    </section>
 
     <section class="rules">
         <div class="clan-title">
-            <img src="rule.jpg" alt="Rules Icon" class="icon">
+            <img src="img/rule.jpg" alt="Rules Icon" class="icon">
             <h2>Rules</h2>
         </div>
         <p style="font-weight: bold; margin-top: 5px; margin-bottom: 5px;">Here are the rules for Clan War League:</p>
@@ -294,116 +38,128 @@
 
     <section class="clan">
         <div class="clan-title">
-            <img src="kc.jpg" alt="Clan Icon" class="icon">
+            <img src="img/kc.png" alt="Clan Icon" class="icon">
             <h2>Krazy Canucks</h2>
             <a href="https://link.clashofclans.com/en?action=OpenClanProfile&tag=R0RL9UC" rel="noreferrer"
                 target="_blank" title="Krazy Canucks clan link"> <!-- Add the appropriate URL to href -->
-                <img src="link.png" alt="Clan Link Icon" class="link-icon">
+                <img src="img/link.png" alt="Clan Link Icon" class="link-icon">
             </a>
         </div>
 
-        <p style="font-weight: bold; margin-top: 5px;">Clan Roster</p>
+        <div class="clan-roster">
+            <p>Clan Roster(15)</p>
+            <img src="img/champ2.png" alt="Champion League II" title="Champion League II">
+        </div>
 
         <ul class="player-grid" style="margin-top: 10px;">
-            <li>jeegar</li>
             <li>shiva</li>
-            <li>r4nsom</li>
-            <li>Krishh</li>
-            <li>King Anonymous</li>
+            <li>jeegar</li>
             <li>Infrared</li>
             <li>Charles</li>
-            <li>jj</li>
-            <li>Aman</li>
-            <li>Jackal</li>
-            <li>G-MAN</li>
-            <li>Pork Chop</li>
             <li>Tremor</li>
+            <li>jj</li>
+            <li>Kami Den Gale</li>
             <li>R1derfan7</li>
+            <li>King Anonymous</li>
+            <li>qwerty</li>
+            <li>misteranswer</li>
+            <li>r4nsom</li>
+            <li>Jackal</li>
+            <li>Miami</li>
+            <li>G-MAN</li>
         </ul>
 
-        <p style="font-weight: bold; margin-top: 5px;">Substitute</p>
+        <!-- <p style="font-weight: bold; margin-top: 5px;">Substitute</p>
 
         <ul class="player-grid" style="margin-top: 10px;">
             <li>misteranswer</li>
             <li>qwerty</li>
             <li>Cyclone</li>
-        </ul>
+        </ul> -->
 
     </section>
     <!-- Clan 2 -->
     <section class="clan">
         <div class="clan-title">
-            <img src="kl.jpg" alt="Clan Icon" class="icon">
+            <img src="img/kl.png" alt="Clan Icon" class="icon">
             <h2>Krazy Legends</h2>
             <a href="https://link.clashofclans.com/en?action=OpenClanProfile&tag=2LGGYCY8R" rel="noreferrer"
                 target="_blank" title="Krazy Legend clan link"> <!-- Add the appropriate URL to href -->
-                <img src="link.png" alt="Clan Link Icon" class="link-icon">
+                <img src="img/link.png" alt="Clan Link Icon" class="link-icon">
             </a>
         </div>
-        <p style="font-weight: bold; margin-top: 5px;">Clan Roster</p>
+        <div class="clan-roster">
+            <p>Clan Roster(15)</p>
+            <img src="img/master1.png" alt="Master League I" title="Master League I">
+        </div>
 
         <ul class="player-grid" style="margin-top: 10px;">
-            <li>rnsm</li>
-            <li>Lil bog</li>
-            <li>bogger</li>
-            <li>Miami</li>
-            <li>Boom</li>
-            <li>suman重Bro</li>
+            <li>Aman</li>
             <li>waynovision</li>
-            <li>Darkest Malice</li>
-            <li>Bacon Barbarian</li>
+            <li>EggWard</li>
+            <li>You</li>
             <li>Aristocrat</li>
-            <li>❤️GLAD_SON❤️</li>
+            <li>Bacon Barbarian</li>
+            <li>suman重Bro</li>
+            <li>peoples champ</li>
+            <li>Boom</li>
             <li>King Fabes</li>
             <li>Hunter</li>
-            <li>Kami Den Gale</li>
+            <li>Dirk Diggler</li>
+            <li>❤️GLAD_SON❤️</li>
+            <li>Papa Bear</li>
             <li>ÑÔVÂ</li>
-             <li>darkreaperx38</li>
         </ul>
     </section>
     <!-- Clan 3 -->
     <section class="clan">
         <div class="clan-title">
-            <img src="KF.jpg" alt="Clan Icon" class="icon">
+            <img src="img/KF.png" alt="Clan Icon" class="icon">
             <h2>Krazy Feeders</h2>
             <a href="https://link.clashofclans.com/en?action=OpenClanProfile&tag=Y9L29VLY" rel="noreferrer"
                 target="_blank" title="Krazy Feeders clan link"> <!-- Add the appropriate URL to href -->
-                <img src="link.png" alt="Clan Link Icon" class="link-icon">
+                <img src="img/link.png" alt="Clan Link Icon" class="link-icon">
             </a>
         </div>
-        <p style="font-weight: bold; margin-top: 5px;">Clan Roster</p>
+        <div class="clan-roster">
+            <p>Clan Roster(30)</p>
+            <img src="img/crystal1.png" alt="Crystal League I" title="Crystal League I">
+        </div>
 
         <ul class="player-grid" style="margin-top: 10px;">
+            <li>Darkest Malice</li>
+            <li>KriSO</li>
             <li>BSBHATTI</li>
-            <li>Dirk Diggler</li>
-            <li>Madhukar don ms</li>
-            <li>Dunny</li>
-            <li>Papa Bear</li>
             <li>Poke-n-Choke</li>
+            <li>99% 1 Star</li>
             <li>GuncapYT</li>
             <li>conqueror wally</li>
-            <li>OtterJosh</li>
+            <li>KILLER CHIRAG 7</li>
             <li>Mini L8R</li>
             <li>MAYUR</li>
             <li>Deztroyer</li>
-            <li>URVISH</li>
-            <li>Kriso</li>
+            <li>Hodor</li>
+            <li>Madhukar don ms</li>
             <li>XxwolfkillerxX</li>
-            <li>Colby</li>
-            <li>suvajit</li>
+            <li>URVISH</li>
             <li>AyxVal</li>
+            <li>suvajit</li>
             <li>Krazy☣Jeegar</li>
             <li>TEJAL</li>
             <li>Jayy</li>
-            <li>ÑØVÂ 2.O</li>
             <li>rockybytes</li>
+            <li>ÑØVÂ 2.O</li>
             <li>Dodgers ②④</li>
             <li>jeegar</li>
             <li>Thacker bapu</li>
             <li>YoungCreed™️☑️</li>
-            <li>silent killer</li>
-            <li>Hodor</li>
-            <li>Jeegar</li>
+            <li>Mr. Chillaxin</li>
+            <li>Sir Chillaxin</li>
+        </ul>
+        <p style="font-weight: bold; margin-top: 5px;">Substitute</p>
+        <ul class="player-grid" style="margin-top: 10px;">
+            <li>OtterJosh</li>
+            <li>darkreaperx38</li>
         </ul>
     </section>
     <footer>
